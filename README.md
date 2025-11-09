@@ -14,7 +14,7 @@ Cheat Device is a game enhancer for PlayStation 2 games similar to Action
 Replay, GameShark, and CodeBreaker. It supports booting retail, disc based 
 games as well as ELF files such as OpenPS2Loader or ESR.
 
-See the [wiki](https://github.com/israpps/CheatDevicePS2/wiki) to get started
+See the [wiki](https://israpps.github.io/CheatDevicePS2/Documentation/) to get started
 using Cheat Device.
 
 ## Features
