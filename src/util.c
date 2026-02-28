@@ -287,7 +287,7 @@ void handlePad()
         else if(pad_rapid & PAD_L2)
             menuUpAlpha();
         
-        if(pad_pressed & PAD_CIRCLE || pad_pressed & PAD_START)
+        if(pad_pressed & PAD_CROSS || pad_pressed & PAD_START)
         {
             menuSetActive(MENU_MAIN);
             selected = 0;
@@ -308,7 +308,7 @@ void handlePad()
         else if(pad_rapid & PAD_L2)
             menuGoToPreviousHeader();
 
-        if(pad_pressed & PAD_CIRCLE)
+        if(pad_pressed & PAD_CROSS)
             menuSetActive(MENU_GAMES);
         else if(pad_pressed & PAD_START)
             menuSetActive(MENU_MAIN);
@@ -326,14 +326,14 @@ void handlePad()
         else if(pad_pressed & PAD_L2)
             menuGoToTop();
 
-        if(pad_pressed & PAD_CIRCLE)
+        if(pad_pressed & PAD_CROSS)
             menuSetActive(MENU_CHEATS);
     }
 
     else if(currentMenu == MENU_MAIN)
     {
         graphicsDrawMainMenu(selected);
-        if(pad_pressed & PAD_CROSS)
+        if(pad_pressed & PAD_CIRCLE)
         {
             if(selected == 0) // boot game
                 menuSetActive(MENU_BOOT);
@@ -344,7 +344,7 @@ void handlePad()
         }
         else if(pad_pressed & PAD_SELECT)
             graphicsDrawAboutPage();
-        else if(pad_pressed & PAD_CIRCLE)
+        else if(pad_pressed & PAD_CROSS)
             menuSetActive(MENU_GAMES);
         else if(pad_pressed & PAD_RIGHT)
         {
@@ -364,7 +364,7 @@ void handlePad()
 
     else if(currentMenu == MENU_BOOT)
     {
-        if(pad_pressed & PAD_CIRCLE)
+        if(pad_pressed & PAD_CROSS)
         {
             menuRemoveAllItems();
             menuSetActive(MENU_MAIN);
@@ -375,7 +375,7 @@ void handlePad()
     {
         graphicsDrawDeviceMenu(selectedDevice);
         graphicsDrawTextCentered(150, COLOR_WHITE, "Select device to view saves");
-        if(pad_pressed & PAD_CROSS)
+        if(pad_pressed & PAD_CIRCLE)
         {
             menuSetActive(MENU_SAVES);
             if(selectedDevice == 0)
@@ -386,7 +386,7 @@ void handlePad()
                 savesLoadSaveMenu(FLASH_DRIVE);
         }
         
-        if(pad_pressed & PAD_CIRCLE)
+        if(pad_pressed & PAD_CROSS)
         {
             menuSetActive(MENU_MAIN);
         }
@@ -408,7 +408,7 @@ void handlePad()
 
     else if(currentMenu == MENU_SAVES)
     {
-        if(pad_pressed & PAD_CIRCLE)
+        if(pad_pressed & PAD_CROSS)
         {
             menuRemoveAllItems();
             menuSetActive(MENU_SAVE_DEVICES);
@@ -427,7 +427,7 @@ void handlePad()
         else if(pad_pressed & PAD_L2)
             menuGoToTop();
 
-        if(pad_pressed & PAD_CIRCLE)
+        if(pad_pressed & PAD_CROSS)
         {
             menuSetActive(MENU_CHEATS);
         }
@@ -483,7 +483,7 @@ int displayTextEditMenu(char *dstStr, int dstLen, const char *initialStr, const 
         u32 pad_pressed = padPressed();
         u32 pad_rapid = padHeld();
         
-        if(pad_pressed & PAD_CROSS)
+        if(pad_pressed & PAD_CIRCLE)
         {
             if(row < KEYBOARD_ROWS && column < KEYBOARD_COLUMNS)
             {
@@ -550,7 +550,7 @@ int displayTextEditMenu(char *dstStr, int dstLen, const char *initialStr, const 
         else if(pad_pressed & PAD_R2)
             upper ^= 1;
 
-        else if(pad_pressed & PAD_CIRCLE)
+        else if(pad_pressed & PAD_CROSS)
             ret = 0;
         
         if(pad_rapid & PAD_UP)
@@ -665,7 +665,7 @@ int displayTextEditMenu(char *dstStr, int dstLen, const char *initialStr, const 
 
 static const char *HELP_TICKER_CODE_EDIT_MENU = \
     "{L1}/{R1} Move Cursor     "
-    "{CROSS} Set Value     "
+    "{CIRCLE} Set Value     "
     "{START} Accept";
 
 static const char *CODE_KEYBOARD_CHARS = \
@@ -702,7 +702,7 @@ static int displayCodeEditMenu(u64 *code, const int isNewCode)
         u32 pad_pressed = padPressed();
         u32 pad_rapid = padHeld();
 
-        if(pad_pressed & PAD_CROSS)
+        if(pad_pressed & PAD_CIRCLE)
         {
             if(row < CODE_KEYBOARD_ROWS && column < CODE_KEYBOARD_COLUMNS)
             {
@@ -732,7 +732,7 @@ static int displayCodeEditMenu(u64 *code, const int isNewCode)
             ret = 1;
         }
 
-        else if(pad_pressed & PAD_CIRCLE)
+        else if(pad_pressed & PAD_CROSS)
             ret = 0;
 
         if(pad_rapid & PAD_L1)
@@ -923,12 +923,12 @@ int displayPromptMenu(const char **items, int numItems, const char *header)
                 ++selectedItem;
         }
 
-        else if(pad_held & PAD_CIRCLE)
+        else if(pad_held & PAD_CROSS)
         {
             // Exit menu
             return -1;
         }
-    } while(!(pad_held & PAD_CROSS));
+    } while(!(pad_held & PAD_CIRCLE));
     
     return selectedItem;
 }

@@ -26,8 +26,8 @@ const char *flashDriveDevice = "mass:";
 #endif
 
 static const char *HELP_TICKER_SAVES = \
-    "{CROSS} Copy     "
-    "{CIRCLE} Device Menu";
+    "{CIRCLE} Copy     "
+    "{CROSS} Device Menu";
 
 static const char *MEMORY_CARD_1_NAME   = "Memory Card (Slot 1)";
 static const char *MEMORY_CARD_2_NAME   = "Memory Card (Slot 2)";

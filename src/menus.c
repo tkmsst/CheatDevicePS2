@@ -519,7 +519,7 @@ int menuProcessInputCallbacks(u32 padPressed)
         activeMenu->callbacks[MENU_CALLBACK_PRESSED_SQUARE](current);
         return 1;
     }
-    else if((padPressed & PAD_CROSS) &&
+    else if((padPressed & PAD_CIRCLE) &&
         activeMenu->callbacks[MENU_CALLBACK_PRESSED_CROSS])
     {
         activeMenu->callbacks[MENU_CALLBACK_PRESSED_CROSS](current);

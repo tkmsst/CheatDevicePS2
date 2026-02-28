@@ -46,28 +46,28 @@ static cheatDatabaseHandler_t cheatDatabaseHandlers[] = {
 };
 
 static const char *HELP_TICKER_GAMES = \
-    "{CROSS} Cheat List     "
+    "{CIRCLE} Cheat List     "
     "{SQUARE} Options     "
-    "{CIRCLE} Main Menu     "
+    "{CROSS} Main Menu     "
     "{L1}/{R1} Page Up/Down     "
     "{L2}/{R2} Alphabetical Up/Down";
 
 static const char *HELP_TICKER_CHEATS = \
-    "{CROSS} Enable/Disable Cheat     "
+    "{CIRCLE} Enable/Disable Cheat     "
     "{SQUARE} Options     "
-    "{CIRCLE} Game List    "
+    "{CROSS} Game List    "
     "{L1}/{R1} Page Up/Down     "
     "{L2}/{R2} Section Up/Down";
 
 static const char *HELP_TICKER_CODES_NORMAL = \
-    "{CROSS} Edit Code Line     "
+    "{CIRCLE} Edit Code Line     "
     "{SQUARE} Options     "
-    "{CIRCLE} Cheat Menu";
+    "{CROSS} Cheat Menu";
 
 static const char *HELP_TICKER_CODES_NONE = \
-    "{CROSS} Add Code Line     "
+    "{CIRCLE} Add Code Line     "
     "{SQUARE} Options     "
-    "{CIRCLE} Cheat Menu";
+    "{CROSS} Cheat Menu";
 
 int killCheats()
 {

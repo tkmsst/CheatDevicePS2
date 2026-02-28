@@ -42,9 +42,9 @@ static char *defaultBootPaths[] = {
 };
 
 static const char *HELP_TICKER = \
-    "{CROSS} Boot     "
+    "{CIRCLE} Boot     "
     "{SQUARE} Options     "
-    "{CIRCLE} Main Menu";
+    "{CROSS} Main Menu";
 
 static void getINIString(struct ini_info *ini, char **dst, const char *keyName, const char *defaultValue)
 {
